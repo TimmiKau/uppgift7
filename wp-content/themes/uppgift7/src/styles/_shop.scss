@@ -12,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  padding-bottom: 150px;;
 
   .product {
     width: 25%;
@@ -35,11 +36,21 @@
     a {
       text-decoration: none;
     }
+
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    
+      width: auto;
+      height: auto; 
+      object-fit: contain; 
+    }
+
+    .add_to_cart_button {
+      display: none;
+    }
   }
+}
+.page-title.woocommerce-products-header__title {
+  display: none;
+}
+#sidebar {
+  display: none;
 }
