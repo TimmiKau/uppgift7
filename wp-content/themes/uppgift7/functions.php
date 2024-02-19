@@ -22,3 +22,11 @@ function uppgift7_register_menus()
 }
 add_action('init', 'uppgift7_register_menus');
 
+//  Inställningar
+function add_custom_settings_page()
+{
+    add_options_page('Address Settings', 'Adress', 'manage_options', 'custom-settings', 'custom_settings_page_output');
+}
+add_action('admin_menu', 'add_custom_settings_page');
+
+
