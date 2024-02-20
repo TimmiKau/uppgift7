@@ -1,18 +1,36 @@
+body {
+  margin: 0;
+}
+
 .woocommerce-result-count {
   font-size: 14px;
   color: #333;
   padding: 10px 0;
-  padding-left: 25%;
   font-weight: bold;
-  background-color: #9f9f9f;
+  background-color: #faf4f4;
   border-left: 2px solid #ccc;
+  margin-right: 20px; /* Lägg till mellanrum mellan result count och ordering */
+}
+
+.woocommerce-ordering {
+  font-size: 14px;
+  color: #333;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: #faf4f4;
+}
+
+/* Container för båda elementen */
+.woocommerce-controls-container {
+  display: flex;
+  align-items: flex-start; /* Justera för önskad vertikal justering */
 }
 
 .products.columns-4 {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  padding-bottom: 150px;;
+  padding-bottom: 150px;
 
   .product {
     width: 25%;
@@ -20,17 +38,18 @@
     box-sizing: border-box;
 
     .woocommerce-loop-product__title {
-      font-size: 10px;
-      font-weight: bold;
-      color: #333;
+      font-size: 18px;
+      font-weight: lighter;
+      color: #666666;
       margin-bottom: 10px;
       font-family: Arial, Helvetica, sans-serif;
+      width: 70%;
     }
 
     .price {
-      font-size: 14px;
-      font-weight: bold;
+      font-size: 34px;
       color: #333;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
@@ -39,8 +58,8 @@
 
     img {
       width: auto;
-      height: auto; 
-      object-fit: contain; 
+      height: auto;
+      object-fit: contain;
     }
 
     .add_to_cart_button {
@@ -48,9 +67,36 @@
     }
   }
 }
+
 .page-title.woocommerce-products-header__title {
   display: none;
 }
+
 #sidebar {
   display: none;
+}
+
+/* Stil för result count */
+.woocommerce-result-count {
+  display: inline-block; /* Visa elementet som en inline-block för att placera bredvid andra element */
+  font-size: 17px;
+  color: #333;
+  background-color: #faf4f4; /* Lägg till bakgrundsfärg */
+  padding: 40px 0;
+  margin-right: 10px; /* Justera högermarginalen */
+  width: 70%; /* Sätt bredden till 70% av containern */
+  margin: 20 -40 0 0;
+  text-align: center; /* Centrera texten horisontellt */
+
+}
+
+/* Stil för ordering */
+.woocommerce-ordering {
+  display: inline-block; /* Visa elementet som en inline-block för att placera bredvid andra element */
+  font-size: 30px;
+  color: #333;
+  background-color: #faf4f4;
+  padding: 41 0 40 0;
+  width: 32%;
+  margin: 20 0 0 0;
 }
