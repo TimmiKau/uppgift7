@@ -1,0 +1,208 @@
+
+//Thins to fix
+//Remove button
+//margin/alignment for the cart and total
+//order quantiy arrows
+
+
+//Controls all un controlled values
+*{
+    font-family: $font;
+    //font-size: $font-size-medium;
+    text-decoration: none;
+}
+
+
+.woocommerce{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    .cart-collaterals{
+       width: 40%;
+        margin: 40px;
+       .cart_totals{
+          width: 100%;
+       }
+    }
+ 
+ .woocommerce-cart-form{
+    display: flex;
+    width: 60%;
+    background-color: transparent;
+
+
+    td.product-thumbnail{
+            a{
+                width: 100px;
+                height: 100px;
+            }
+    }
+
+    //List of products
+    .shop_table{
+
+       td.product-thumbnail{
+        display: block;
+        height: 100px;
+        a{
+            img{
+                height: 106px;
+                width: 106px;
+            }
+        }
+    }
+
+    //Change font title-bar
+        .product-thumbnail, .product-name,.product-price,.product-quantity,.product-subtotal{
+            font-size: $font-size-medium;
+            font-weight: bold;
+            padding: 9px 0px;
+        }
+       
+        .woocommerce-cart-form__cart-item{
+
+
+
+td.product-remove{
+    position: relative;
+   
+}
+
+a.remove {
+    text-indent: -9999px;
+    border: 0;
+}
+
+a.remove:hover{
+    display: none;
+}
+a.remove:before {
+        content: ''; 
+        position: absolute;
+        
+        left: 25%; 
+        width: 28px; 
+        height: 28px; 
+        //background-image: url("../../../../uploads/logo/bin.png"); 
+        background-image: url("https://static-00.iconduck.com/assets.00/trash-icon-1842x2048-wi4nz5uj.png");
+        background-size: contain; 
+        background-repeat: no-repeat;
+    }
+
+
+  
+
+
+            .product-name,.product-price {
+                color: $font-second-color;
+                a{       
+                text-decoration: none;
+                color: $font-second-color;
+                
+            }
+        
+        }    .product-subtotal{
+            font-weight: lighter;
+           
+        }
+        }
+        
+        .actions{
+            display: none;
+        }
+        
+        //Try to remove the up/down button.
+         input#quantity_65d338d60708f.input-text{
+        display: none;
+        }
+
+        //Icon for the remove button- add before //Does not work...
+        tr.product-remove::before{
+            display: block;
+            background-color: #B88E2F;
+          content: url("");
+          height: 10px;
+          width: 10px;
+          position: absolute;
+        }
+
+        thead{
+            background-color: $Sec-color;
+        }
+    }
+ }
+
+//Price box div
+.cart-collaterals{
+    padding: 10px;
+    padding-bottom: 40px;
+    background-color: $Sec-color;
+    width: auto;
+    border-radius: 0px;
+
+.cart_totals {
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+//Text: Cart Totals
+    h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    table.shop_table{
+        position: relative;
+        .cart-subtotal{
+     th{
+        font-size: $font-size-medium;
+        
+     }
+     
+            //Price
+     td{
+         color: #9F9F9F;
+         font-size: $font-size-medium;
+         position: absolute;
+         right: 2rem;
+     }
+     }
+ 
+     .order-total{
+         //Name / Total
+         th{
+         border-top: none;
+         font-size: $font-size-medium;
+         }
+ 
+         //Price
+         td{
+            .woocommerce-Price-amount{
+                color: #B88E2F;
+                font-size: $font-size-big;
+            }
+         }
+     }}
+    
+
+    .wc-proceed-to-checkout {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    a{
+        background-color: transparent;
+        color: black;
+        border: solid black 1px;
+        border-radius: 10px;
+        padding: 12px 30px;
+        font-weight: normal;
+        font-size: $font-size-big;
+    }
+}
+}
+}  
+}
