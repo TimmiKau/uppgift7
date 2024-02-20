@@ -1,5 +1,5 @@
 <?php
-require_once ("vite.php");
+require_once("vite.php");
 
 //This will require the init folder. That loads start files
 require_once(get_template_directory() . "/init.php");
@@ -40,5 +40,24 @@ function change_postcode_text($translated_text, $text, $domain)
         $translated_text = 'ZIP code';
     }
     return $translated_text;
+}
+
+add_filter('woocommerce_default_address_fields', 'move_city_down');
+
+function move_city_down($address_fields)
+{
+    $address_fields['postcode']['priority'] = 30;
+    $address_fields['city']['priority'] = 50;
+    return $address_fields;
+}
+// Flytta "Additional Information" under e-postfältet på kassasidan
+add_filter('woocommerce_checkout_fields', 'move_additional_info_under_email', 90);
+
+function move_additional_info_under_email($fields)
+{
+    // Justera prioritet för "Additional Information" för att flytta den under e-postfältet
+    $fields['order']['order_comments']['priority'] = 35;
+
+    return $fields;
 }
 

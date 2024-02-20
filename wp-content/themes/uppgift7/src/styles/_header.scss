@@ -70,7 +70,7 @@ header {
     transform: translateY(-50%);
     width: 28px; 
     height: 28px; 
-    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Vector.png'); 
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Vector.png'); 
     background-size: contain; 
     background-repeat: no-repeat;
 }
@@ -87,7 +87,7 @@ header {
     transform: translateY(-50%); 
     width: 28px; 
     height: 28px; 
-    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Search.png'); 
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Search.png'); 
     background-size: contain; 
     background-repeat: no-repeat; 
 }
@@ -104,7 +104,7 @@ header {
     transform: translateY(-50%); /* Centrera vertikalt */
     width: 28px; /* Justera beroende på storlek på ikonen */
     height: 28px; /* Justera beroende på storlek på ikonen */
-    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Heart.png'); /* Sökväg till din bildfil */
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Heart.png'); /* Sökväg till din bildfil */
     background-size: contain; /* Justera storlek för att passa in i förälderelementet */
     background-repeat: no-repeat; /* Undvik upprepning av bakgrundsbilden */
 }
@@ -121,7 +121,7 @@ header {
     transform: translateY(-50%); /* Centrera vertikalt */
     width: 28px; /* Justera beroende på storlek på ikonen */
     height: 28px; /* Justera beroende på storlek på ikonen */
-    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Cart.png'); /* Sökväg till din bildfil */
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Cart.png'); /* Sökväg till din bildfil */
     background-size: contain; /* Justera storlek för att passa in i förälderelementet */
     background-repeat: no-repeat; /* Undvik upprepning av bakgrundsbilden */
 }
@@ -149,7 +149,7 @@ header {
 }
 
 .banner {
-    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/hero.png'); /* Sökväg till din bild */
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/hero.png'); 
     background-size: cover; 
     background-position: center; 
     padding: 50px; 
