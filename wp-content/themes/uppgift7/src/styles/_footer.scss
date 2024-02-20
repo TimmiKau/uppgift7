@@ -4,19 +4,35 @@ footer{
     align-items: center;
     background-color: #fff;
     position: relative;
+      font-family: $font;
+
 
      .footer-text {
         display: flex;
         justify-content: space-between;
         width: 100%;
         padding: 10px;
-        background-color: #f0f0f0;
+        background-color: $footer-banner-color;
 
         .footer-column {
-            width: 30%;
+            width: 100%;
             padding: 30px;
             box-sizing: border-box;
             text-align: center;
+            
+            h3{
+                font-size: 32px;
+                font-weight: 500;
+
+            }
+            p{
+                color: $font-second-color;
+                font-size: $font-size-medium;
+                width: calc(50% + 50px);
+                margin-left: 100px;
+                margin-top: -20px;
+            }
+           
         }
     }
     .footer-content{
@@ -121,7 +137,7 @@ footer{
             margin-top: 10px;
 
             input[type="email"]{
-                padding: 10px;
+                padding: 5px;
                 width: 200px;
                 margin-right: 10px;
                 border: none;
