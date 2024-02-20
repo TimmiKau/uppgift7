@@ -1,23 +1,28 @@
+$primary-color: #333;
+$background-color: #faf4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+$font-size-normal: 14px;
+$font-size-large: 30px;
+
 body {
   margin: 0;
 }
 
-.woocommerce-result-count {
-  font-size: 14px;
-  color: #333;
-  padding: 10px 0;
+.woocommerce-result-count,
+.woocommerce-ordering {
+  font-size: $font-size-normal;
+  color: $primary-color;
   font-weight: bold;
-  background-color: #faf4f4;
-  border-left: 2px solid #ccc;
-  margin-right: 20px; /* Lägg till mellanrum mellan result count och ordering */
+  background-color: $background-color;
+  padding: 10px 0;
 }
 
-.woocommerce-ordering {
-  font-size: 14px;
-  color: #333;
-  padding: 10px 0;
-  font-weight: bold;
-  background-color: #faf4f4;
+.woocommerce-result-count {
+  border-left: 2px solid #ccc;
+  margin-right: 20px;
+  font-family: $font-stack;
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 /* Container för båda elementen */
@@ -42,14 +47,14 @@ body {
       font-weight: lighter;
       color: #666666;
       margin-bottom: 10px;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: $font-stack;
       width: 70%;
     }
 
     .price {
       font-size: 34px;
-      color: #333;
-      font-family: Arial, Helvetica, sans-serif;
+      color: $primary-color;
+      font-family: $font-stack;
     }
 
     a {
@@ -68,35 +73,30 @@ body {
   }
 }
 
-.page-title.woocommerce-products-header__title {
-  display: none;
-}
-
+/* Dölj sidrubrik och sidofält */
+.page-title.woocommerce-products-header__title,
 #sidebar {
   display: none;
 }
 
-/* Stil för result count */
+
 .woocommerce-result-count {
-  display: inline-block; /* Visa elementet som en inline-block för att placera bredvid andra element */
+  display: inline-block;
   font-size: 17px;
   color: #333;
-  background-color: #faf4f4; /* Lägg till bakgrundsfärg */
-  padding: 40px 0;
-  margin-right: 10px; /* Justera högermarginalen */
-  width: 70%; /* Sätt bredden till 70% av containern */
-  margin: 20 -40 0 0;
-  text-align: center; /* Centrera texten horisontellt */
-
+  background-color: #faf4f4;
+  text-align: center;
+  width: 70%;
+  padding: 40 0 40 0;
+  margin: 0px;
 }
 
-/* Stil för ordering */
 .woocommerce-ordering {
-  display: inline-block; /* Visa elementet som en inline-block för att placera bredvid andra element */
+  display: inline-block;
   font-size: 30px;
   color: #333;
   background-color: #faf4f4;
+  width: 30%;
   padding: 41 0 40 0;
-  width: 32%;
-  margin: 20 0 0 0;
+  margin: 0 0 0 -7;
 }
