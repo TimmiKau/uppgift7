@@ -30,3 +30,15 @@ function add_custom_settings_page()
 add_action('admin_menu', 'add_custom_settings_page');
 
 
+// Checkout 
+
+add_filter('gettext', 'change_postcode_text', 20, 3);
+
+function change_postcode_text($translated_text, $text, $domain)
+{
+    if ($text === 'Postcode / ZIP') {
+        $translated_text = 'ZIP code';
+    }
+    return $translated_text;
+}
+

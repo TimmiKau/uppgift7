@@ -1,17 +1,18 @@
 header {
-    width: auto;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font;
+
+    .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Justera avståndet mellan menyn och bannern */
+}
 
     .column-50 {
-        margin-left: auto;
-        margin-right: -360px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: green;
+        width: calc(60% + 100px);
 
         ul {
             display: flex;
@@ -33,14 +34,8 @@ header {
         }
     }
     .column-60 {
-
-        margin-left:auto;
-        margin-right: 30px;
-        background-color: red;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: calc(0% - 80px);
+        margin-left: 10px;
 
         ul {
             display: flex;
@@ -50,16 +45,132 @@ header {
             li {
                 margin: 20px;
                 list-style: none;
+                
 
                 a {
                     text-decoration: none;
                     color: #000;
+                    font-size: 0;
+                    
+                    
                 }
             }
 
+           #menu-item-87 a {
+    position: relative; 
+    padding-left: 30px;
+}
+  
+
+#menu-item-87 a::before {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%);
+    width: 28px; 
+    height: 28px; 
+    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Vector.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+           #menu-item-25 a {
+    position: relative; 
+    padding-left: 30px; 
+}
+
+#menu-item-25 a::before {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+    width: 28px; 
+    height: 28px; 
+    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Search.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+}
+           #menu-item-26 a {
+    position: relative; 
+    padding-left: 30px; 
+}
+
+#menu-item-26 a::before {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0; /* Placera helt till vänster */
+    transform: translateY(-50%); /* Centrera vertikalt */
+    width: 28px; /* Justera beroende på storlek på ikonen */
+    height: 28px; /* Justera beroende på storlek på ikonen */
+    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Heart.png'); /* Sökväg till din bildfil */
+    background-size: contain; /* Justera storlek för att passa in i förälderelementet */
+    background-repeat: no-repeat; /* Undvik upprepning av bakgrundsbilden */
+}
+    #menu-item-27 a {
+    position: relative; /* Nödvändigt för att pseudo-element ska fungera */
+    padding-left: 30px; /* Justera beroende på storlek på ikonen */
+}
+
+#menu-item-27 a::before {
+    content: ''; /* Skapar det pseudo-element som representerar ikonen */
+    position: absolute; /* Absolut position i förhållande till förälderelementet */
+    top: 50%; /* Placera vertikalt i mitten av förälderelementet */
+    left: 0; /* Placera helt till vänster */
+    transform: translateY(-50%); /* Centrera vertikalt */
+    width: 28px; /* Justera beroende på storlek på ikonen */
+    height: 28px; /* Justera beroende på storlek på ikonen */
+    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/Cart.png'); /* Sökväg till din bildfil */
+    background-size: contain; /* Justera storlek för att passa in i förälderelementet */
+    background-repeat: no-repeat; /* Undvik upprepning av bakgrundsbilden */
+}
+            }
             a:hover {
                 text-decoration: underline;
             }
-        }
+
+            .menu{
+
+                #menu-item-24{
+                    a::before{
+                        color: aqua;
+                        font-size: 22px;
+                    }
+                }
+            }                
+            
+        
     }
+
+    
+    
+
 }
+
+.banner {
+    background-image: url('/Users/jesperandersson/Desktop/enkelt/uppgift7/wp-content/themes/uppgift7/images/hero.png'); /* Sökväg till din bild */
+    background-size: cover; 
+    background-position: center; 
+    padding: 50px; 
+    text-align: center; 
+    margin: 0;
+}
+.banner h3{
+    font-size: 48px;
+    font-weight: $font-weight;
+    font-family: $font;
+}
+p{
+    font-size: 16px;
+    font-weight: $font-weight;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+.banner a:hover {
+    text-decoration: underline;
+}
+

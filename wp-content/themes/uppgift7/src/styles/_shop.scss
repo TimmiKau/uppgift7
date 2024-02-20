@@ -1,0 +1,102 @@
+$primary-color: #333;
+$background-color: #faf4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+$font-size-normal: 14px;
+$font-size-large: 30px;
+
+body {
+  margin: 0;
+}
+
+.woocommerce-result-count,
+.woocommerce-ordering {
+  font-size: $font-size-normal;
+  color: $primary-color;
+  font-weight: bold;
+  background-color: $background-color;
+  padding: 10px 0;
+}
+
+.woocommerce-result-count {
+  border-left: 2px solid #ccc;
+  margin-right: 20px;
+  font-family: $font-stack;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/* Container för båda elementen */
+.woocommerce-controls-container {
+  display: flex;
+  align-items: flex-start; /* Justera för önskad vertikal justering */
+}
+
+.products.columns-4 {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-bottom: 150px;
+
+  .product {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .woocommerce-loop-product__title {
+      font-size: 18px;
+      font-weight: lighter;
+      color: #666666;
+      margin-bottom: 10px;
+      font-family: $font-stack;
+      width: 70%;
+    }
+
+    .price {
+      font-size: 34px;
+      color: $primary-color;
+      font-family: $font-stack;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .add_to_cart_button {
+      display: none;
+    }
+  }
+}
+
+/* Dölj sidrubrik och sidofält */
+.page-title.woocommerce-products-header__title,
+#sidebar {
+  display: none;
+}
+
+
+.woocommerce-result-count {
+  display: inline-block;
+  font-size: 17px;
+  color: #333;
+  background-color: #faf4f4;
+  text-align: center;
+  width: 70%;
+  padding: 40 0 40 0;
+  margin: 0px;
+}
+
+.woocommerce-ordering {
+  display: inline-block;
+  font-size: 30px;
+  color: #333;
+  background-color: #faf4f4;
+  width: 30%;
+  padding: 41 0 40 0;
+  margin: 0 0 0 -7;
+}
