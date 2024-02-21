@@ -1,4 +1,6 @@
-.woocommerce{
+
+    
+ .woocommerce{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,10 +24,10 @@
     font-size: 36px;
     font-weight: 600;
 }
-.woocommerce-billing-fields label {
-    font-size: $font-size-medium;
-    font-family: $font; 
+.woocommerce-billing-fields__field-wrapper label{
+    font-size: 16px;
     font-weight: $font-weight;
+    font-family: $font;
     
 }
 
@@ -145,7 +147,23 @@ font-family: $font;
 
 }
 
+#order_comments{
+    resize: none;
+     font-size: $font-checkout-medium;
+    font-family: $font; 
+    color: $font-second-color;
+    height: $form-height;
+    border-radius: $form-radius;
+    resize: none;
+    padding-left: 10px;
+    width: 80%;
+    padding-top: 20px;
+}
 
+.woocommerce-checkout #billing_email,
+.woocommerce-checkout #order_comments {
+    margin-bottom: 50px; /* Justera storleken på mellanrummet efter behov */
+}
 
 strong.product-quantity{
     color: black;

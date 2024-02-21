@@ -39,7 +39,6 @@ defined( 'ABSPATH' ) || exit;
 			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 
 			if ($key === 'billing_city') {
-				// Province field
 				woocommerce_form_field('billing_province', array(
 					'type'        => 'select',
 					'label'       => 'Province',
@@ -53,6 +52,7 @@ defined( 'ABSPATH' ) || exit;
 					),
 				), $checkout->get_value('billing_province'));
 			}
+			
 		}
 
 		

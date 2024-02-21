@@ -50,14 +50,29 @@ function move_city_down($address_fields)
     $address_fields['city']['priority'] = 50;
     return $address_fields;
 }
-// Flytta "Additional Information" under e-postfältet på kassasidan
 add_filter('woocommerce_checkout_fields', 'move_additional_info_under_email', 90);
 
 function move_additional_info_under_email($fields)
 {
-    // Justera prioritet för "Additional Information" för att flytta den under e-postfältet
     $fields['order']['order_comments']['priority'] = 35;
 
     return $fields;
 }
+
+
+add_filter('woocommerce_checkout_fields', 'move_order_notes_field', 20);
+function move_order_notes_field($fields)
+{
+    unset($fields['order']['order_comments']['label']);
+    $fields['order']['order_comments']['placeholder'] = 'Additional information';
+    $fields['order']['order_comments']['priority'] = 20; 
+    return $fields;
+}
+add_filter('woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_on_cart');
+add_filter('woocommerce_cart_needs_shipping', 'disable_shipping_on_cart');
+function disable_shipping_on_cart($enabled)
+{
+    return is_checkout() ? true : false;
+}
+
 
