@@ -176,6 +176,8 @@ strong.product-quantity{
 .woocommerce-checkout #payment {
 background-color: transparent;
 margin-left: 50px;
+margin-right: 80px;
+border-top: 1px solid $copyright-color;
 }
 
 .woocommerce-checkout #payment ul.payment_methods {
@@ -206,7 +208,7 @@ margin-left: -65px;
 
 .woocommerce-privacy-policy-text{
 margin-top: -40px;
-width: 90%;
+width: 100%;
 }
 
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.alt{

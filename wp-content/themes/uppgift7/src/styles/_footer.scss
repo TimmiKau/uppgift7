@@ -15,7 +15,6 @@ footer{
         background-color: $footer-banner-color;
 
         .footer-column {
-            width: 100%;
             padding: 30px;
             box-sizing: border-box;
             text-align: center;
@@ -25,14 +24,23 @@ footer{
                 font-weight: $footer-font-weight-large;
 
             }
+            &:first-child h3 {
+            margin-right: 20px;
+            }
             p{
                 color: $font-second-color;
                 font-size: $footer-p-size-large;
                 width: calc(60% + 50px);
-                left: 85px;
-                margin-top: -20px;
+                left: 125px;
                 position: relative;
+                text-align: left;
+                
             }
+            &:last-child p{
+                margin-right: 20px;
+            }
+            
+            
            
         }
     }
@@ -173,6 +181,7 @@ footer{
     left: 35px;
     top: 120px;
     width: 95%; 
+    height: 40px;
     padding: 5px;      
     padding-top: 30px;
     }
