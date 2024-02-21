@@ -1,6 +1,5 @@
 <?php
 
-// WordPress checks if you are admin
 if (is_admin() == false) {
     return;
 }
@@ -192,7 +191,6 @@ function footer_div_3_content_field()
     $content = get_option('footer_div_3_content');
     echo '<textarea name="footer_div_3_content">' . esc_textarea($content) . '</textarea>';
 }
-// Upprepa detta mönster för de andra två divarna (div 2 och div 3)...
 
 
 ?>

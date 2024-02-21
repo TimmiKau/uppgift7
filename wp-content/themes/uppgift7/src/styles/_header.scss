@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px; /* Justera avståndet mellan menyn och bannern */
+    margin-right: 20px;
 }
 
     .column-50 {
@@ -24,7 +24,7 @@ header {
                 
                 a {
                     text-decoration: none;
-                    color: #000;
+                    color: $font-color;
                     
                 }
             }
@@ -49,7 +49,7 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: #000;
+                    color: $font-color;
                     font-size: 0;
                     
                     
@@ -68,8 +68,8 @@ header {
     top: 50%; 
     left: 0; 
     transform: translateY(-50%);
-    width: 28px; 
-    height: 28px; 
+    width: $icon-size; 
+    height: $icon-size; 
     background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Vector.png'); 
     background-size: contain; 
     background-repeat: no-repeat;
@@ -85,8 +85,8 @@ header {
     top: 50%; 
     left: 0; 
     transform: translateY(-50%); 
-    width: 28px; 
-    height: 28px; 
+    width: $icon-size; 
+    height: $icon-size; 
     background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Search.png'); 
     background-size: contain; 
     background-repeat: no-repeat; 
@@ -100,45 +100,37 @@ header {
     content: ''; 
     position: absolute; 
     top: 50%; 
-    left: 0; /* Placera helt till vänster */
-    transform: translateY(-50%); /* Centrera vertikalt */
-    width: 28px; /* Justera beroende på storlek på ikonen */
-    height: 28px; /* Justera beroende på storlek på ikonen */
-    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Heart.png'); /* Sökväg till din bildfil */
-    background-size: contain; /* Justera storlek för att passa in i förälderelementet */
-    background-repeat: no-repeat; /* Undvik upprepning av bakgrundsbilden */
+    left: 0; 
+    transform: translateY(-50%); 
+    width: $icon-size; 
+    height: $icon-size; 
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Heart.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
 }
     #menu-item-27 a {
-    position: relative; /* Nödvändigt för att pseudo-element ska fungera */
-    padding-left: 30px; /* Justera beroende på storlek på ikonen */
+    position: relative; 
+    padding-left: 30px; 
 }
 
 #menu-item-27 a::before {
-    content: ''; /* Skapar det pseudo-element som representerar ikonen */
-    position: absolute; /* Absolut position i förhållande till förälderelementet */
-    top: 50%; /* Placera vertikalt i mitten av förälderelementet */
-    left: 0; /* Placera helt till vänster */
-    transform: translateY(-50%); /* Centrera vertikalt */
-    width: 28px; /* Justera beroende på storlek på ikonen */
-    height: 28px; /* Justera beroende på storlek på ikonen */
-    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Cart.png'); /* Sökväg till din bildfil */
-    background-size: contain; /* Justera storlek för att passa in i förälderelementet */
-    background-repeat: no-repeat; /* Undvik upprepning av bakgrundsbilden */
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+    width: $icon-size; 
+    height: $icon-size; 
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/Cart.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
 }
             }
             a:hover {
                 text-decoration: underline;
             }
 
-            .menu{
-
-                #menu-item-24{
-                    a::before{
-                        color: aqua;
-                        font-size: 22px;
-                    }
-                }
-            }                
+                        
             
         
     }
@@ -149,26 +141,27 @@ header {
 }
 
 .banner {
-    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/hero.png'); 
+    background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/header1.png'); 
     background-size: cover; 
     background-position: center; 
     padding: 50px; 
     text-align: center; 
     margin: 0;
+    
 }
 .banner h3{
-    font-size: 48px;
+    font-size: $banner-size;
     font-weight: $font-weight;
     font-family: $font;
 }
 p{
-    font-size: 16px;
+    font-size: $header-p-size;
     font-weight: $font-weight;
 }
 a{
     text-decoration: none;
-    color: #000;
-    font-weight: 600;
+    color: $font-color;
+    font-weight: $header-weight;
 }
 .banner a:hover {
     text-decoration: underline;

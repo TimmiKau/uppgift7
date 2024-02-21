@@ -1,7 +1,6 @@
 <?php
 require_once("vite.php");
 
-//This will require the init folder. That loads start files
 require_once(get_template_directory() . "/init.php");
 
 function mytheme_add_woocommerce_support()

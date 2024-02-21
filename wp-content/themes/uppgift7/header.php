@@ -61,7 +61,11 @@
                     echo '<a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a> &gt; ';
                 }
             }
-            echo esc_html( get_the_title() );
+            if ( is_shop() ) {
+                echo 'Shop';
+            } else {
+                echo esc_html( get_the_title() );
+            }
         } elseif ( is_category() ) {
             single_cat_title();
         } elseif ( is_tag() ) {
@@ -76,6 +80,9 @@
         ?>
     </p>
 </div>
+
+
+
 
 </body>
 

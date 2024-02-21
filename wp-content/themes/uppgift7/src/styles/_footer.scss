@@ -4,7 +4,7 @@ footer{
     align-items: center;
     background-color: #fff;
     position: relative;
-      font-family: $font;
+    font-family: $font;
 
 
      .footer-text {
@@ -21,16 +21,17 @@ footer{
             text-align: center;
             
             h3{
-                font-size: 32px;
-                font-weight: 500;
+                font-size: $footer-h3-size;
+                font-weight: $footer-font-weight-large;
 
             }
             p{
                 color: $font-second-color;
-                font-size: 20px;
-                width: calc(50% + 50px);
-                margin-left: 100px;
+                font-size: $footer-p-size-large;
+                width: calc(60% + 50px);
+                left: 85px;
                 margin-top: -20px;
+                position: relative;
             }
            
         }
@@ -57,9 +58,9 @@ footer{
         margin-right: -100px;
         p{
             font-family:'Poppins';
-            font-weight: 400;
-            font-size: 16px;
-            color: #9F9F9F;
+            font-weight: $footer-font-weight-medium;
+            font-size: $footer-p-size-medium;
+            color: $footer-p-color;
             margin: 0;
             margin-left: 50px;
         }
@@ -83,10 +84,10 @@ footer{
         
         
         h3{
-            font-style: 16px;
-            font-weight: 500;
+            font-style: $footer-p-size-medium;
+            font-weight: $footer-font-weight-large;
             line-height: 24px;
-            color: #9F9F9F;
+            color: $footer-p-color;
             margin: 0;
             display: inline-block;
         }
@@ -106,9 +107,9 @@ footer{
 
               a{
             text-decoration: none;
-            color: #000;
-            font-size: 16px;
-            font-weight: 500;
+            color: $footer-links-color;
+            font-size: $footer-p-size-medium;
+            font-weight: $footer-font-weight-large;
 
         }
 
@@ -123,9 +124,9 @@ footer{
         text-align: center;
        
         h3{
-            font-style: 16px;
-            font-weight: 500;
-            color: #9F9F9F;
+            font-style: $footer-p-size-medium;
+            font-weight: $footer-font-weight-large;
+            color: $footer-p-color;
             margin: 0;
             margin-right: 175px; 
             }
@@ -135,39 +136,54 @@ footer{
             justify-content: center;
             align-items: center;
             margin-top: 10px;
+            margin-left: 20px;
+            width: 90%;
 
             input[type="email"]{
-                padding: 5px;
-                width: 200px;
-                margin-right: 10px;
+                padding: 0;
+                width: 100%;
+                margin-right: 20px;
                 border: none;
                 background-color: transparent;
-                text-decoration: 2px underline;
+                border-bottom: 2px solid;               
                 margin: 0;
-                font-size: 16px;
+                font-size: $footer-p-size-small;
                 
             }
 
             button{
-                padding: 10px 0;
+                padding: 0;
                 background-color: transparent;
-                color: #000;
+                color: $footer-links-color;
                 border: none;
-                text-decoration: 2px underline;
+                width: 50%;
+                border-bottom: 2px solid;               
+                margin-left: 6px;
                 cursor: pointer;
+                font-weight: $footer-weight-xl;
+                font-size: $footer-p-size-small;
             }
         }
     }
 
     .copyright{
     position: relative;
+    display: inline-block;
     bottom: 0; 
-    left: 0;
-    top: 85px;
-    width: 100%; 
-    padding: 10px; 
-    box-sizing: border-box; 
-    text-align: left; 
-    margin-bottom: 0;
+    left: 35px;
+    top: 120px;
+    width: 95%; 
+    padding: 5px;      
+    padding-top: 30px;
     }
+    .copyright::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 99%; 
+    height: 1px; 
+    background-color: $copyright-color; 
+}
 }
